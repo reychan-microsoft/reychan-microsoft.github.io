@@ -11,7 +11,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --bs-blue: #2937f0;
+  --bs-blue: #28358b;
   --bs-indigo: #6610f2;
   --bs-purple: #9f1ae2;
   --bs-pink: #d63384;
@@ -236,11 +236,11 @@ sup {
 }
 
 a {
-  color: #2937f0;
-  text-decoration: underline;
+  color:#000;/* #2937f0;*/
+  text-decoration: none;
 }
 a:hover {
-  color: #212cc0;
+  color: #28358b;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -3943,7 +3943,7 @@ textarea.form-control-lg {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #2937f0;
+  color: #28358b;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -3953,7 +3953,7 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: #212cc0;
+  color: #28358b;
 }
 .nav-link.disabled {
   color: #6c757d;

@@ -16,22 +16,23 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
             <div class="container px-5">
-                <a class="navbar-brand fw-bold" href="#page-top"><img src="assets/img/ms-logo.png" height="60"></a>
+                <a class="navbar-brand fw-bold" href="#page-top"><img src="assets/img/ms-logo.png" height="50"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="bi-list"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Pocket Demos</a></li>
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="#download">Common Themes</a></li>
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="#features">Solution Map</a></li>
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="#features">Credits</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="#pocketdemos">Pocket Demos</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="#commonthemes">Common Themes</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="#solutionmap">Solution Map</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="#credits">Credits</a></li>
                     </ul>
                 </div>
             </div>
@@ -40,38 +41,66 @@
         <header class="masthead">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
-                    <div class="col-lg-4">
-                        <p align="center">Left</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <p align="center">Middle</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <p align="center">Right</p>
-                    </div>
+                    <div align="center"><img src="assets/img/uni-contoso.png" class="img-fluid" style="width:70%;"/></div>
                 </div>
             </div>
         </header>
 
+        <!-- Pocket Demos -->
+        <section id="pocketdemos">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-12 pb-5" align="center">
+                <h1 style="color:#28358b">Pocket Demos Across the Student Lifecycle</h1>
+                </div>
+                <div class="col-lg-3">
+                    <div align="center" class="pt-5">
+                        <h2><a href="#" data-img="assets/img/ana-industry-partner.png" class="lifecycle">Industry Partners</a></h2>
+                        <p>Foster community, partnerships, advocacy and lifelong learning.
+                        </p>
+                    </div>
+                    <div align="center" class="pt-5">
+                        <h2><a href="#" data-img="assets/img/ana-alumni.png" class="lifecycle">Alumni</a></h2>
+                        <p>Foster community, partnerships, advocacy and lifelong learning.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div align="center"><img id="studentimage" src="assets/img/ana-currentstudent.png" class="img-fluid" style="width:70%"></div>
+                </div>
+                <div class="col-lg-3">
+                    <div align="center" class="pt-5">
+                        <h2><a href="#" data-img="assets/img/ana-futurestudent.png" class="lifecycle">Future Students</a></h2>
+                        <p>Reaching the right prospects and making it easy to apply and enrol.</p>
+                    </div>
+                    <div align="center" class="pt-5">
+                        <h2><a href="#" data-img="assets/img/ana-currentstudent.png" class="lifecycle">Current Students</a></h2>
+                        <p>Proactively supporting student success and wellbeing. 
+                        </p>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
         <!-- Common Themes -->
-        <section id="features">
+        <section id="commonthemes" style="background:#eae4dc">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
                     <img src="assets/img/hed-common-themes.png"/>
                 </div>
             </div>
         </section>
-        <!-- Quote/testimonial aside-->
-        <aside class="text-center bg-gradient-primary-to-secondary">
+
+        <!-- Solution Map -->
+        <section id="solutionmap" style="background:#eae4dc;border-top:10px solid #fff">
             <div class="container px-5">
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-xl-8">
-                        <div class="h2 fs-1 text-white mb-4">"An intuitive solution to a common problem that we all face, wrapped up in a single app!"</div>
-                        <img src="assets/img/tnw-logo.svg" alt="..." style="height: 3rem" />
-                    </div>
+                <div class="row gx-5 align-items-center">
+                    <h1 align="center">Solution Map</h1>
+                    <img src="assets/img/bizapps-solution-map-Apr2022.png"/>
                 </div>
             </div>
-        </aside>
+        </section>
+
         <!-- Footer
         <footer class="bg-black text-center py-5">
             <div class="container px-5">
@@ -85,72 +114,7 @@
                 </div>
             </div>
         </footer>-->
-        <!-- Feedback Modal-->
-        <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header bg-gradient-primary-to-secondary p-4">
-                        <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Send feedback</h5>
-                        <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body border-0 p-4">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary rounded-pill btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
@@ -160,5 +124,31 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+        <script>
+            //For Changing the Student Lifecycle Image
+            $('.lifecycle').mouseover(function(){
+                // retrieve the image inside this element
+                var img = $('#studentimage');
+                var elem = $(this).attr('data-img');
+                // set the 'src' to the 'data-img' value
+                img.fadeTo(500,0.30, function() {
+                   img.attr("src",elem);
+                }).fadeTo(500,1);
+                return false;
+                                
+            });
+            /*$('.lifecycle').mouseout(function(){
+                // retrieve the image inside this element
+                var img = $('#studentimage');
+                var elem = 'assets/img/ana-futurestudent.png';
+                // set the 'src' to the 'data-img' value
+                img.fadeTo(500,0.30, function() {
+                   img.attr("src",elem);
+                }).fadeTo(500,1);
+                return false;
+                                
+            });*/
+        </script>
     </body>
 </html>
