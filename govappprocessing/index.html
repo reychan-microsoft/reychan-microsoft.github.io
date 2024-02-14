@@ -47,16 +47,19 @@
           <!-- Start Card -->
           <div class="col-md-12">
             <div class="card mb-4 shadow-sm">
-              <div class="card-body"><h1 align="center" style="padding-top:20px">Application Processing Journey Map</h1></div>
+              <div class="card-body"><h1 align="center" style="padding-top:20px">Application Processing Journey Map</h1>
               <a href="#" class="pop"><img class="card-img-top" src="https://i.imgur.com/SywnDRJ.png" alt="Application Processing Journey Map" width="300"></a>
+              <!--<div class="pb-3" align="center"><button class="btn btn-lg btn-primary">Watch Demo Journey Video</button></div>-->
+              </div>
             </div>
           </div>
+          
           <!-- End Card -->
           <div class="row">
             <!-- Start Card -->
             <div class="col-md-3">
                 <div class="card mb-4 shadow-sm">
-                    <a href="application-for-license.html" target="_blank"><img class="card-img-top" src="https://i.imgur.com/M3wUc23.png" alt="Card image cap"></a>
+                    <a class="popiframe" href="#" src="application-for-license.html"><img class="card-img-top" src="https://i.imgur.com/M3wUc23.png" alt="Card image cap"></a>
                   <div class="card-body">
                     <h5>Application for License</h5>
                       <p class="card-text">Capabilities Featured:</p>
@@ -68,7 +71,7 @@
                         </ul>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <a href="application-for-license.html" target="_blank"><button type="button" class="btn btn-sm btn-outline-primary">View</button></a>
+                        <a class="popiframe" href="#" src="application-for-license.html"><button type="button" class="btn btn-sm btn-outline-primary">View</button></a>
                       </div>
                       <small class="text-muted"></small>
                     </div>
@@ -174,7 +177,7 @@
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">              
           <div class="modal-body">
-            <img src="" class="imagepreview" style="width: 100%;" >
+            
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
@@ -191,10 +194,18 @@
 
     <script>
         $(function() {
+          //image modal
           $('.pop').on('click', function() {
-            $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+            var img_src = $(this).find('img').attr('src');
+            $('#imagemodal').find('.modal-body').html("<img src='"+img_src+"' style='width:100%;'/>");
             $('#imagemodal').modal('show');   
-          });		
+          });	
+          //iframe modal
+          $('.popiframe').on('click', function() {
+            var href_src = $(this).attr('src');
+            $('#imagemodal').find('.modal-body').html("<iframe src='"+href_src+"' style='width:100%;height:100%'/>");
+            $('#imagemodal').modal('show');   
+          });	
         });
     </script>
 
