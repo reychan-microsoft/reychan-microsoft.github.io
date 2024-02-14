@@ -26,7 +26,7 @@
     <!-- Header Title -->
     <main role="main">
       <!-- Carousel-->
-      <div id="carouselDemo" class="carousel carousel-dark slide carousel-fade py-5">
+      <div id="carouselDemo" class="carousel carousel-dark slide py-5">
         <!--<div class="carousel-indicators" style="bottom:-50px">
           <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -87,7 +87,8 @@
 
       <div align="center" style="padding-top:50px">
         <button class="btn btn-outline-dark" data-bs-target="#carouselDemo" data-bs-slide="prev" style="margin-right:10px">Back</button> 
-        <button class="btn btn-dark" data-bs-target="#carouselDemo" data-bs-slide="next">Next</button>
+        <span class="num"></span>
+        <button id="btn_next" class="btn btn-dark" data-bs-target="#carouselDemo" data-bs-slide="next" style="margin-left:10px">Next</button>
       </div>
 
     </main>
@@ -115,15 +116,30 @@
     <script>      
         // document ready
         $(document).ready(function(){
-            // Event for pushed the video
+            
+          // Event for pushed the video
             $('#carouselDemo').carousel({
-                interval: false
+                interval: false,
+                wrap: false
             });
+            
             //Modals
             $('.pop').on('click', function() {
-            $('.imagepreview').attr('src', $(this).find('img').attr('src'));
-            $('#imagemodal').modal('show');   
-          });		
+              $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+              $('#imagemodal').modal('show');   
+            });
+
+            //Get Slide Number         
+            var totalItems = $('.carousel-item').length;
+            var currentIndex = $('div.active').index() + 1;
+            $('.num').html(''+currentIndex+'/'+totalItems+'');
+
+            $('#carouselDemo').bind('slid.bs.carousel', function() {
+              var currentIndex = $('div.active').index() + 1;
+                $('.num').html(''+currentIndex+'/'+totalItems+'');
+            });
+
+
         });
     </script>
 
